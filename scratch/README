@@ -1,0 +1,2 @@
+To Compile: g++ main.cpp -o test -lglut -lGLU -lGL -lGLEW
+To Execute: ./test

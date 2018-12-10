@@ -1,19 +1,24 @@
-import java.awt.Canvas;
-import java.awt.Graphics;
-import javax.swing.JFrame;
 
-public class Drawing extends Canvas 
-{
-    public static void main(String[] args) {
-        JFrame frame = new JFrame("My Drawing");
-        Canvas canvas = new Drawing();
-        canvas.setSize(400, 400);
-        frame.add(canvas);
-        frame.pack();
-        frame.setVisible(true);
-    }
+import javax.swing.*;
 
-    public void paint(Graphics g) {
-        g.fillOval(100, 100, 200, 200);
-    }
+
+public class Drawing extends JPanel implements ActionListener{
+  Timer time = new Timer(5,this);
+  double x = 0, y = 0, velX = 2, velY = 2;
+
+  public void paintComponent(Graphics g)
+  {
+    super.paintComponent(g);
+    Graphics2D g2 = (Graphics2D) g;
+    Ellipse2D circle = new Ellipse2D.Double(x,y,40,40);
+    g2.fill(circle);
+    t.start();
+  }
+
+  public void actionPerformed(ActionEvent e)
+  {
+    x += velX;
+    y += velY;
+    repaint();
+  }
 }

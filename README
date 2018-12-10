@@ -1,5 +1,6 @@
 Git Commands
 
-To add new file: git add 'filepatch/filename.file'
-To track changes: git commit -am 'message about what you changed'
-To send to repository to master(the repository): git push origin master
+To add new file:    git add 'filepatch/filename.file'
+To add all edited and new files:    git add -A
+To track changes:   git commit -am 'message about what you changed'
+To send to repository to master(the repository):    git push origin master

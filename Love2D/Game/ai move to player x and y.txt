@@ -1,0 +1,11 @@
+	for i, v in pairs(ai)do
+		 dx = v.x - player.x
+		 dy = v.y - player.y
+		 dis = math.sqrt(dx^2 + dy^2) -- vector from ai to player
+		--if love.keyboard.isDown("e") then
+			v.x = v.x - dx/dis * 300 * dt -- creep left or right
+		--end
+		--if love.keyboard.isDown("q") then
+			v.y = v.y - dy/dis * 300 * dt -- creep up or down
+		--end
+	end
